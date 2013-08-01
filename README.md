@@ -1,8 +1,11 @@
 # eBay Enterprise Affiliate Network API
 
+[![Gem Version](https://badge.fury.io/rb/ebay_enterprise_affiliate_network.png)](http://badge.fury.io/rb/ebay_enterprise_affiliate_network)
+[![Build Status](https://travis-ci.org/rmarescu/ebay_enterprise_affiliate_network.png?branch=master)](https://travis-ci.org/rmarescu/ebay_enterprise_affiliate_network)
+
 Ruby wrapper for [eBay Enterprise Affiliate Network API](http://help.pepperjamnetwork.com/api/) (formerly PepperJam Exchange API). Only [Publisher API](http://help.pepperjamnetwork.com/api/publisher) is supported at this moment. If you need [Advertiser API](http://help.pepperjamnetwork.com/api/advertiser) or [Partner API](http://help.pepperjamnetwork.com/api/partner), feel free to [contribute](#contributing).
 
-For questions or bugs please [create an issue](issues/new).
+For questions or bugs please [create an issue](../../issues/new).
 
 ## <a id="installation"></a>Installation
 
