@@ -129,4 +129,4 @@ Website ID can be retrieved from http://www.pepperjamnetwork.com/affiliate.
 
 ## <a id="license"></a>License
 
-[MIT](LICENSE.md)
+[MIT](LICENSE.txt)
