@@ -19,11 +19,11 @@ Gem::Specification.new do |s|
   s.executables           = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.require_paths         = ["lib"]
 
-  s.add_dependency "addressable", "~> 2.3.5"
-  s.add_dependency "htmlentities", "~> 4.3.1"
+  s.add_dependency "addressable", "~> 2.3", ">= 2.3.6"
+  s.add_dependency "htmlentities", "~> 4.3", ">= 4.3.2"
   s.add_dependency "httparty", "~> 0.13"
-  s.add_dependency "json", "~> 1.8.0"
-  s.add_dependency "recursive-open-struct", "~> 0.4.3"
+  s.add_dependency "json", "~> 1.8", ">= 1.8.1"
+  s.add_dependency "recursive-open-struct", "~> 0.5", ">= 0.5.0"
 
   s.add_development_dependency "bundler", "~> 1.3"
   s.add_development_dependency "rake"
