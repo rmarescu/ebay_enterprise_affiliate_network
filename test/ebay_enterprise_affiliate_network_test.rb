@@ -76,7 +76,7 @@ class EBayEnterpriseAffiliateNetworkTest < Test::Unit::TestCase
     stub_request(
       :get,
       "http://api.pepperjamnetwork.com/20120402/publisher/advertiser?apiKey=#{EBayEnterpriseAffiliateNetwork.api_key}&format=json&status=foo").
-        with(headers: {}).
+        with(headers: { "Accept" => "*/*", "Accept-Encoding" => /.*/, "User-Agent" => /.*/ }).
         to_return(
           status: [400, "foo is not a valid program status option."],
           body: json_response,
@@ -103,7 +103,7 @@ class EBayEnterpriseAffiliateNetworkTest < Test::Unit::TestCase
     stub_request(
       :get,
       "http://api.pepperjamnetwork.com/20120402/publisher/advertiser/category?apiKey=#{EBayEnterpriseAffiliateNetwork.api_key}&format=json").
-        with(headers: {}).
+        with(headers: { "Accept" => "*/*", "Accept-Encoding" => /.*/, "User-Agent" => /.*/ }).
         to_return(
           status: [500, "Internal Server Error"],
           body: json_response,
@@ -132,7 +132,7 @@ class EBayEnterpriseAffiliateNetworkTest < Test::Unit::TestCase
     stub_request(
       :get,
       "http://api.pepperjamnetwork.com/20120402/publisher/advertiser/category?apiKey=#{EBayEnterpriseAffiliateNetwork.api_key}&format=json").
-        with(headers: {}).
+        with(headers: { "Accept" => "*/*", "Accept-Encoding" => /.*/, "User-Agent" => /.*/ }).
         to_return(
           status: [401, "Authentication error."],
           body: json_response,
@@ -165,7 +165,7 @@ class EBayEnterpriseAffiliateNetworkTest < Test::Unit::TestCase
     stub_request(
       :get,
       "http://api.pepperjamnetwork.com/20120402/publisher/advertiser/category?apiKey=#{EBayEnterpriseAffiliateNetwork.api_key}&format=json").
-        with(headers: {}).
+        with(headers: { "Accept" => "*/*", "Accept-Encoding" => /.*/, "User-Agent" => /.*/ }).
         to_return(status: 200, body: json_response, headers: {})
 
     response = publisher.get("advertiser/category")
@@ -260,19 +260,19 @@ class EBayEnterpriseAffiliateNetworkTest < Test::Unit::TestCase
     stub_request(
       :get,
       "http://api.pepperjamnetwork.com/20120402/publisher/advertiser/category?apiKey=#{EBayEnterpriseAffiliateNetwork.api_key}&format=json").
-        with(headers: {}).
+        with(headers: { "Accept" => "*/*", "Accept-Encoding" => /.*/, "User-Agent" => /.*/ }).
         to_return(status: 200, body: response_page_1, headers: {})
 
     response = publisher.get("advertiser/category")
     stub_request(
       :get,
       "http://api.pepperjamnetwork.com/20120402/publisher/advertiser/category?apiKey=#{EBayEnterpriseAffiliateNetwork.api_key}&format=json&page=2").
-        with(headers: {}).
+        with(headers: { "Accept" => "*/*", "Accept-Encoding" => /.*/, "User-Agent" => /.*/ }).
         to_return(status: 200, body: response_page_2, headers: {})
     stub_request(
       :get,
       "http://api.pepperjamnetwork.com/20120402/publisher/advertiser/category?apiKey=#{EBayEnterpriseAffiliateNetwork.api_key}&format=json&page=3").
-        with(headers: {}).
+        with(headers: { "Accept" => "*/*", "Accept-Encoding" => /.*/, "User-Agent" => /.*/ }).
         to_return(status: 200, body: response_page_3, headers: {})
     all_categories = response.all
     check_results(response)

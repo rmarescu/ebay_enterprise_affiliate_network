@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "htmlentities", "~> 4.3", ">= 4.3.2"
   s.add_dependency "httparty", "~> 0.13"
   s.add_dependency "json", "~> 1.8", ">= 1.8.1"
-  s.add_dependency "recursive-open-struct", "~> 1.0.1"
+  s.add_dependency "recursive-open-struct", "~> 1.0"
 
   s.add_development_dependency "bundler", "~> 1.3"
   s.add_development_dependency "rake"
